@@ -1,1 +1,181 @@
 @import 'tailwindcss';
+
+/* Custom styles for the Gong application */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Gong swing animation - realistic pendulum motion */
+@keyframes swing {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  15% {
+    transform: translateX(-50%) rotate(4deg);
+  }
+  30% {
+    transform: translateX(-50%) rotate(-3deg);
+  }
+  45% {
+    transform: translateX(-50%) rotate(2deg);
+  }
+  60% {
+    transform: translateX(-50%) rotate(-1deg);
+  }
+  75% {
+    transform: translateX(-50%) rotate(0.5deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+/* Vibration effect for the gong when struck */
+@keyframes vibrate {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  10% {
+    transform: translateX(-50%) rotate(0.5deg) scale(1.02);
+  }
+  20% {
+    transform: translateX(-50%) rotate(-0.5deg) scale(1.01);
+  }
+  30% {
+    transform: translateX(-50%) rotate(0.3deg) scale(1.02);
+  }
+  40% {
+    transform: translateX(-50%) rotate(-0.3deg) scale(1.01);
+  }
+  50% {
+    transform: translateX(-50%) rotate(0.2deg) scale(1.01);
+  }
+  60% {
+    transform: translateX(-50%) rotate(-0.2deg) scale(1.005);
+  }
+  70% {
+    transform: translateX(-50%) rotate(0.1deg) scale(1.005);
+  }
+  80% {
+    transform: translateX(-50%) rotate(-0.1deg) scale(1.002);
+  }
+  90% {
+    transform: translateX(-50%) rotate(0.05deg) scale(1.001);
+  }
+}
+
+/* Enhanced ripple effect with multiple waves */
+@keyframes rippleWave {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 1s ease-out;
+}
+
+.animate-swing {
+  animation: swing 2s ease-in-out;
+  transform-origin: top center;
+}
+
+.animate-vibrate {
+  animation: vibrate 0.8s ease-in-out;
+}
+
+.animate-ripple-wave {
+  animation: rippleWave 1.5s ease-out;
+}
+
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Custom bronze colors */
+.bg-bronze-100 {
+  background-color: #f7f3f0;
+}
+
+.text-bronze-700 {
+  color: #8b5a3c;
+}
+
+/* Custom silver colors */
+.bg-silver-100 {
+  background-color: #f8f9fa;
+}
+
+.text-silver-700 {
+  color: #495057;
+}
+
+/* Gong specific animations */
+@keyframes gong-vibrate {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  5% {
+    transform: translateX(-4px) rotate(-0.5deg);
+  }
+  10% {
+    transform: translateX(4px) rotate(0.5deg);
+  }
+  15% {
+    transform: translateX(-3px) rotate(-0.3deg);
+  }
+  20% {
+    transform: translateX(3px) rotate(0.3deg);
+  }
+  25% {
+    transform: translateX(-2px) rotate(-0.2deg);
+  }
+  30% {
+    transform: translateX(2px) rotate(0.2deg);
+  }
+  35% {
+    transform: translateX(-2px) rotate(-0.2deg);
+  }
+  40% {
+    transform: translateX(2px) rotate(0.2deg);
+  }
+  45% {
+    transform: translateX(-1px) rotate(-0.1deg);
+  }
+  50% {
+    transform: translateX(1px) rotate(0.1deg);
+  }
+  60% {
+    transform: translateX(-1px);
+  }
+  70% {
+    transform: translateX(1px);
+  }
+  80% {
+    transform: translateX(-0.5px);
+  }
+  90% {
+    transform: translateX(0.5px);
+  }
+}
+
+.animate-gong-vibrate {
+  animation: gong-vibrate 1.5s ease-out;
+}
