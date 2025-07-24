@@ -23,7 +23,7 @@ const renderAndWaitForApp = async () => {
 describe('Main App Component', () => {
   beforeEach(() => {
     global.fetch = mockSuccessfulFetch();
-    
+
     // Mock localStorage
     const localStorageMock = {
       getItem: jest.fn(),
@@ -46,25 +46,25 @@ describe('Main App Component', () => {
 
   test('displays main heading', async () => {
     await renderAndWaitForApp();
-    
+
     expect(screen.getByRole('heading', { name: /Microsoft Word Feature Gong/i, level: 1 })).toBeInTheDocument();
   });
 
   test('displays instructions for striking the gong', async () => {
     await renderAndWaitForApp();
-    
+
     expect(screen.getByText(/Strike the gong to celebrate your latest feature release!/i)).toBeInTheDocument();
   });
 
   test('renders gong component', async () => {
     await renderAndWaitForApp();
-    
+
     expect(screen.getByRole('button', { name: /Strike the celebration gong/i })).toBeInTheDocument();
   });
 
   test('displays hit count stats', async () => {
     await renderAndWaitForApp();
-    
+
     expect(screen.getByText(/Feature Celebrations/i)).toBeInTheDocument();
   });
 });

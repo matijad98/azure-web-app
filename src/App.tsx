@@ -86,12 +86,12 @@ export const App = () => {
 
             <div className="grid md:grid-cols-3 gap-6 text-sm text-gray-600">
               <div className="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500 text-center">
-                <div className="text-3xl mb-3">�</div>
+                <div className="text-3xl mb-3">🚀</div>
                 <h3 className="font-semibold mb-2 text-blue-800">Ship a Feature</h3>
                 <p>Complete and release a new Word feature for any platform</p>
               </div>
               <div className="p-4 bg-green-50 rounded-lg border-l-4 border-green-500 text-center">
-                <div className="text-3xl mb-3">�</div>
+                <div className="text-3xl mb-3">🔔</div>
                 <h3 className="font-semibold mb-2 text-green-800">Strike the Gong</h3>
                 <p>Click the gong to create that satisfying celebration sound</p>
               </div>

@@ -184,12 +184,6 @@ export const Gong = ({ onHit, isAnimating = false }: GongProps) => {
           )}
         </div>
       </div>
-
-      {/* Strike Instructions */}
-      <div className="text-center">
-        <p className="text-gray-700 font-medium">🎉 Udarite gong da proslavite novu funkciju! 🎉</p>
-        <p className="text-sm text-blue-600 mt-1">Svaka verzija zaslužuje proslavu</p>
-      </div>
     </div>
   );
 };
